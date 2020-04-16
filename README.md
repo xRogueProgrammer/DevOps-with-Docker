@@ -1,2 +1,2 @@
 # DevOps-with-Docker
-Course from Helsinki &amp; eficode
+DevOps Course from Helsinki &amp; eficode
