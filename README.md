@@ -39,3 +39,43 @@ You found the correct password. Secret message is:
 "This is the secret message"
 
 ```
+
+## Exercise 1.4
+
+```
+~$ docker run devopsdockeruh/exec_bash_exercise
+(node:1) ExperimentalWarning: The fs.promises API is experimental
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+
+~$ docker exec -it objective_visvesvaraya bash
+root@7d4f6e515591:/usr/app# ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.1  0.2 592596 30008 ?        Ssl  21:01   0:00 node index
+root        16  3.5  0.0  18188  3168 pts/0    Ss   21:04   0:00 bash
+root        21  0.0  0.0  36636  2808 pts/0    R+   21:04   0:00 ps aux
+root@7d4f6e515591:/usr/app# tail -f ./logs.txt
+Mon, 20 Apr 2020 21:04:19 GMT
+Secret message is:
+"Docker is easy"
+Mon, 20 Apr 2020 21:04:25 GMT
+Mon, 20 Apr 2020 21:04:28 GMT
+Mon, 20 Apr 2020 21:04:31 GMT
+Mon, 20 Apr 2020 21:04:34 GMT
+Secret message is:
+"Docker is easy"
+Mon, 20 Apr 2020 21:04:40 GMT
+Mon, 20 Apr 2020 21:04:43 GMT
+Mon, 20 Apr 2020 21:04:46 GMT
+Mon, 20 Apr 2020 21:04:49 GMT
+^C
+```
