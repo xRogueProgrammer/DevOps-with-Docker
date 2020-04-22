@@ -5,8 +5,8 @@ DevOps Course from Helsinki &amp; eficode
 
 ## Exercise 1.1
 
-``` 
 ~$ docker ps -a
+``` 
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
 09f3f61a4207        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) 14 seconds ago                       intelligent_mcclintock
 7f602edf7e46        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) 6 seconds ago                        pensive_brown
