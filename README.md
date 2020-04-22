@@ -82,3 +82,40 @@ Mon, 20 Apr 2020 21:04:46 GMT
 Mon, 20 Apr 2020 21:04:49 GMT
 ^C
 ```
+
+## Exercise 1.5
+```
+~$ docker run -d --name ubuntu_web ubuntu:18.04 sh -c 'while true; do date; sleep 1; done'
+Unable to find image 'ubuntu:18.04' locally
+18.04: Pulling from library/ubuntu
+5bed26d33875: Pull complete 
+f11b29a9c730: Pull complete 
+930bda195c84: Pull complete 
+78bf9a5ad49e: Pull complete 
+Digest: sha256:bec5a2727be7fff3d308193cfde3491f8fba1a2ba392b7546b43a051853a341d
+Status: Downloaded newer image for ubuntu:18.04
+13a71ecac44f1941c7ed848342b09912c4c790ff8bddcf3491e50ef1deaa984d
+
+~$ docker logs -f ubuntu_web
+Wed Apr 22 02:49:49 UTC 2020
+Wed Apr 22 02:49:50 UTC 2020
+Wed Apr 22 02:49:51 UTC 2020
+Wed Apr 22 02:49:52 UTC 2020
+
+~$ docker exec -it ubuntu_web bash
+
+root@13a71ecac44f:/# apt-get update; apt-get install curl
+
+
+~$ sh -c 'echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+Input website:
+helsinki.fi
+Searching..
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+```
