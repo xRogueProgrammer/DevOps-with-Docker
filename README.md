@@ -5,7 +5,8 @@ DevOps Course from Helsinki &amp; eficode
 
 ## Exercise 1.1
 
-``` ~$ docker ps -a
+``` 
+~$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
 09f3f61a4207        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) 14 seconds ago                       intelligent_mcclintock
 7f602edf7e46        nginx               "nginx -g 'daemon of…"   3 minutes ago       Exited (0) 6 seconds ago                        pensive_brown
@@ -14,7 +15,8 @@ da1db3cdd718        nginx               "nginx -g 'daemon of…"   4 minutes ago
 
 ## Exercise 1.2
 
-``` ~$ docker ps -a
+``` 
+~$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 
 ~$ docker images
@@ -23,7 +25,8 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 
 ## Exercise 1.3
 
-``` ~$ docker run -it devopsdockeruh/pull_exercise
+``` 
+~$ docker run -it devopsdockeruh/pull_exercise
 Unable to find image 'devopsdockeruh/pull_exercise:latest' locally
 latest: Pulling from devopsdockeruh/pull_exercise
 8e402f1a9c57: Pull complete 
